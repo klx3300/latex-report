@@ -1,0 +1,169 @@
+\documentclass{article}
+    \include{cnstyle}
+    \include{dereport}
+    \setcounter{tocdepth}{3}
+    \usepackage{amsmath}
+    \usepackage{subcaption}
+    \usepackage{multirow}
+    \title{测试文档}
+    \date{2018-09-01}
+    \author{张三}
+    \begin{document}
+        \pagenumbering{gobble}
+        \maketitle
+        \newpage
+        \tableofcontents
+        \newpage
+        \pagenumbering{arabic}
+        \section{中文段落}
+        你好，世界！
+        \subsection{中文子段落}
+        测试子段落内容。
+        \paragraph{中文段落2}
+        段落内容。
+        \subparagraph{中文子段落2}
+        段落内容2。\\
+        换行测试。
+        \paragraph{公式}
+        \begin{equation}
+            f(x) = x^2
+        \end{equation}
+        \paragraph{无编号公式}
+        \begin{equation*}
+            f(x) = x^3
+        \end{equation*}
+        \paragraph{内联公式}
+        我们需要的结果由公式 $f(x)=sin(x)$ 计算得到。
+        \paragraph{公式按等号对齐}
+        必须使用  将公式分开，否则同一环境下无法写两个公式
+        \begin{align*}
+            x + y &= z\\
+            x &= z - y
+        \end{align*}
+        \paragraph{矩阵}
+        \begin{equation}
+            \left[
+            \begin{matrix}
+                1 & 0 & 1\\
+                0 & 1 & 0\\
+                1 & 0 & 1
+            \end{matrix}
+            \right]
+        \end{equation}
+        \paragraph{扩充型括号}
+        $\left(\frac{1}{\sqrt{x}}\right)$
+        \paragraph{图片}
+        \begin{figure}
+            \includegraphics[width=\linewidth]{myavatar.png}
+            \caption{我的头像}
+            \label{fig:myava1}
+        \end{figure}
+        图 \ref{fig:myava1} 是我的头像。
+        \paragraph{二联图片}
+        \begin{figure}[h!]
+            \centering
+            \begin{subfigure}[b]{0.4\linewidth}
+                \includegraphics[width=\linewidth]{myavatar.png}
+                \caption{我的头像}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.4\linewidth}
+                \includegraphics[width=\linewidth]{myavatar.png}
+                \caption{我的头像的复制}
+            \end{subfigure}
+            \caption{我的头像二联}
+            \label{fig:linkedavatar}
+        \end{figure}
+        \paragraph{表}
+        \begin{table}[h!]
+            \begin{center}
+                \caption{示例表}
+                \label{table:extab1}
+                \begin{tabular}{l|c|r} % first left, second center, third right.
+                    \hline
+                    \textbf{数据甲} & \textbf{数据乙} & \textbf{数据丙}\\
+                    \hline
+                    1 & 1.2 & A\\
+                    2 & 2.3 & B\\
+                    3 & 3.4 & C\\
+                    \hline
+                    \multirow{2}{*}{spanned} & 4.5 & E\\
+                    & 5.6 & F\\
+                \end{tabular}
+            \end{center}
+        \end{table}
+        \section{正文测试}
+        \begin{MainBody}
+            \indent 燕子去了，有再来的时候；杨柳枯了，有再青的时候；桃花谢了，有再开的时候。但是，聪明的，你告诉我，我们的日子为什么一去不复返呢？——是有人偷了他们罢：那是谁？又藏在何处呢？是他们自己逃走了罢：现在又到了哪里呢？    \\
+            \indent 我不知道他们给了我多少日子；但我的手确乎是渐渐空虚了。在默默里算着，八千多日子已经从我手中溜去；像针尖上一滴水滴在大海里，我的日子滴在时间的流里，没有声音，也没有影子。我不禁头涔涔而泪潸潸了。\\
+        \end{MainBody}
+        \newpage
+        \pagenumbering{arabic}
+        \pagestyle{CoverPage}
+        \begin{center}
+            \includegraphics{hust.png}
+        \end{center}
+        \begin{RepTitAll}
+            数字逻辑实验报告(1)
+        \end{RepTitAll}
+        \begin{center}
+            \CJKfontspec{SimHei}
+            \erhao
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{| >{\centering}p{\linewidth}|}{数字逻辑实验 1}\\
+                \hline
+                \sihao
+                系列二进制加法器设计 50\% & \sihao 小型实验室门禁系统设计 50\% & \sihao 总成绩 \\
+                \hline
+                 & & \\
+                 & & \\
+                \hline
+            \end{tabular}
+        \end{center}
+        \begin{center}
+            \xiaosihao
+            \begin{tabular}{|p{\linewidth}|}
+                \hline
+                评语：\\
+                \\
+                \\
+                \\
+                \\
+                \\
+                \\
+                \\
+                \\
+                {
+                    \begin{verbatim}
+                                        教师签名
+                    \end{verbatim}
+                }\\
+                \hline
+            \end{tabular}
+        \end{center}
+        \begin{center}
+            \begin{SignPlace}
+                \begin{tabular}{ccccc}
+                    \textbf{姓} & & & \textbf{名}&\textbf{：}$\rule{4cm}{0.30mm}$\\
+                    \textbf{学} & & & \textbf{号}&\textbf{：}$\rule{4cm}{0.30mm}$\\
+                    \textbf{班} & & & \textbf{级}&\textbf{：}$\rule{4cm}{0.30mm}$\\
+                    \textbf{指}&\textbf{导}&\textbf{教}&\textbf{师}&\textbf{：}$\rule{4cm}{0.30mm}$\\
+                \end{tabular}
+            \end{SignPlace}
+        \end{center}
+        \begin{center}
+            \begin{SignPlace}
+                \textbf{计算机科学与技术学院}
+            \end{SignPlace}
+        \end{center}
+        \newpage
+        \pagestyle{ContentPage}
+        \section{Test}
+        \subsection{TestII}
+        \subsubsection{TestIII}
+        \newpage
+        \begin{appendix}
+            \listoffigures
+            \listoftables
+        \end{appendix}
+    \end{document}

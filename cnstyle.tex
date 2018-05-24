@@ -1,0 +1,49 @@
+\usepackage[x11names]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{xltxtra}
+%\usepackage{xunicode}
+
+%\XeTeXinputencoding "cp936"
+
+\usepackage[top=1.2in,bottom=1.2in,left=1.2in,right=1in]{geometry} % 页边距
+\defaultfontfeatures{Mapping=tex-text}%连字号
+
+\usepackage[boldfont,slantfont,CJKchecksingle,CJKnumber]{xeCJK} % 允许斜体和粗体
+\xeCJKsetup{PunctStyle=hangmobanjiao}
+\setlength{\parindent}{0cm}                 % Default is 15pt.
+\linespread{1.2}                       % 行间距
+\setlength{\parskip}{\baselineskip}    % 段间距
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+
+% \usepackage[unicode=true,colorlinks,linkcolor=blue]{hyperref} % 超链接
+\setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}    %配置中文字体
+\setmainfont{Times New Roman}                % 英文衬线字体
+\setmonofont{Courier New}                    % 英文等宽字体
+\setsansfont{Droid Sans}                     % 英文无衬线字体
+
+
+\usepackage{graphicx}                   % 嵌入png图像
+\usepackage{longtable,tabu,booktabs}
+\usepackage{pdflscape}
+
+\usepackage{tocloft}                        % 目录
+\renewcommand\contentsname{目录}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日} % 中文日期
+
+\renewcommand\figurename{图} % change figure name
+\renewcommand\tablename{表}
+
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}

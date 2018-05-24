@@ -1,0 +1,116 @@
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{zhnumber}
+\usepackage{amsmath}
+\titleformat{\section}
+{
+    \large\bfseries
+}
+{
+    \zhnumber{\thesection} 、
+}
+{0pt}
+{}
+\titleformat{\subsection}
+{
+    \large\bfseries
+}
+{
+    \thesection 、
+}
+{0pt}
+{}
+\titleformat{\subsubsection}
+{
+    \normalsize\bfseries
+}
+{
+    (\thesection) 
+}
+{0pt}
+{}
+\newenvironment{RepTitAll}
+{% before
+    \CJKfontspec{SimHei}
+    \centering
+    \xiaochuhao
+}
+{%after
+
+}
+\newenvironment{ScoreTableTitle}
+{
+    \CJKfontspec{SimHei}
+    \centering
+    \erhao
+}
+{
+
+}
+\newenvironment{SignPlace}
+{
+    \CJKfontspec{SimSun}
+    \sihao
+}
+{
+
+}
+\newenvironment{MainBody}
+{
+    \setlength{\parindent}{2em}
+    \CJKfontspec{SimSun}
+    \wuhao
+}
+{
+
+}
+\newpagestyle{CoverPage}
+{
+    \setfoot{}{\thepage/\pageref{LastPage}}{}
+    \headrule
+}
+\newpagestyle{ContentPage}
+{
+    \sethead{}{\sihao {\textbf{《数字电路与逻辑设计》实验报告}}}{}
+    \setfoot{}{\thepage/\pageref{LastPage}}{}
+    \headrule
+}
+
+% these stuff controls the figure and table numbering.
+% if you are writing books(include chaps.), uncomment comments below.
+% otherwise, keep them commented.
+
+\makeatletter
+\renewcommand \thefigure  { %\ifnum \c@chapter>\z@ \thechapter-\fi
+\ifnum \c@section>\z@ \@arabic\c@section-\fi \ifnum
+\c@subsection>\z@ \@arabic\c@subsection-\fi\ifnum
+\c@subsubsection>\z@
+\@arabic\c@subsubsection-\fi\@arabic\c@equation}
+\makeatother
+
+\makeatletter
+% \@addtoreset{subsubsection}{chapter}
+\@addtoreset{subsubsection}{section}
+% \@addtoreset{figure}{chapter}
+\@addtoreset{figure}{section}
+\@addtoreset{figure}{subsection}
+\@addtoreset{figure}{subsubsection}
+\makeatother
+
+\makeatletter
+\renewcommand \thetable  { %\ifnum \c@chapter>\z@ \thechapter-\fi
+\ifnum \c@section>\z@ \@arabic\c@section-\fi \ifnum
+\c@subsection>\z@ \@arabic\c@subsection-\fi\ifnum
+\c@subsubsection>\z@
+\@arabic\c@subsubsection-\fi\@arabic\c@equation}
+\makeatother
+
+\makeatletter
+% \@addtoreset{subsubsection}{chapter}
+\@addtoreset{subsubsection}{section}
+% \@addtoreset{table}{chapter}
+\@addtoreset{table}{section}
+\@addtoreset{table}{subsection}
+\@addtoreset{table}{subsubsection}
+\makeatother
