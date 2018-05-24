@@ -3,9 +3,11 @@
 \usepackage{lastpage}
 \usepackage{zhnumber}
 \usepackage{amsmath}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
 \titleformat{\section}
 {
-    \large\bfseries
+    \fontsize{14pt}{\baselineskip}\bfseries
 }
 {
     \zhnumber{\thesection} 、
@@ -14,23 +16,23 @@
 {}
 \titleformat{\subsection}
 {
-    \large\bfseries
+    \fontsize{14pt}{\baselineskip}\bfseries
 }
 {
-    \thesection 、
+    \thesubsection 、
 }
 {0pt}
 {}
 \titleformat{\subsubsection}
 {
-    \normalsize\bfseries
+    \fontsize{12pt}{\baselineskip}\bfseries
 }
 {
-    (\thesection) 
+    (\thesubsubsection) 
 }
 {0pt}
 {}
-\newenvironment{RepTitAll}
+\newenvironment{RepTitAll} % overall title
 {% before
     \CJKfontspec{SimHei}
     \centering
@@ -39,7 +41,7 @@
 {%after
 
 }
-\newenvironment{ScoreTableTitle}
+\newenvironment{ScoreTableTitle} % self-explain
 {
     \CJKfontspec{SimHei}
     \centering
@@ -56,7 +58,15 @@
 {
 
 }
-\newenvironment{MainBody}
+\newenvironment{PartTitle} % Part A/B/C/D... Title
+{
+    \CJKfontspec{FZShuTi}
+    \erhao
+}
+{
+
+}
+\newenvironment{MainBody} % The main content
 {
     \setlength{\parindent}{2em}
     \CJKfontspec{SimSun}
@@ -91,7 +101,7 @@
 
 \makeatletter
 % \@addtoreset{subsubsection}{chapter}
-\@addtoreset{subsubsection}{section}
+% \@addtoreset{subsubsection}{section}
 % \@addtoreset{figure}{chapter}
 \@addtoreset{figure}{section}
 \@addtoreset{figure}{subsection}
@@ -108,7 +118,7 @@
 
 \makeatletter
 % \@addtoreset{subsubsection}{chapter}
-\@addtoreset{subsubsection}{section}
+% \@addtoreset{subsubsection}{section}
 % \@addtoreset{table}{chapter}
 \@addtoreset{table}{section}
 \@addtoreset{table}{subsection}
