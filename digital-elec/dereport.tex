@@ -3,11 +3,14 @@
 \usepackage{lastpage}
 \usepackage{zhnumber}
 \usepackage{amsmath}
+\usepackage{caption2}
 \renewcommand{\thesubsection}{\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+\renewcommand{\captionfont}{\CJKfontspec{SimSun}\fontsize{10.5pt}{\baselineskip}\bfseries}
+\renewcommand{\captionlabelfont}{}
 \titleformat{\section}
 {
-    \fontsize{14pt}{\baselineskip}\bfseries
+    \CJKfontspec{SimHei}\fontsize{14pt}{\baselineskip}\bfseries
 }
 {
     \zhnumber{\thesection} 、
@@ -16,7 +19,7 @@
 {}
 \titleformat{\subsection}
 {
-    \fontsize{14pt}{\baselineskip}\bfseries
+    \CJKfontspec{SimHei}\fontsize{14pt}{\baselineskip}\bfseries
 }
 {
     \thesubsection 、
@@ -25,7 +28,7 @@
 {}
 \titleformat{\subsubsection}
 {
-    \fontsize{12pt}{\baselineskip}\bfseries
+    \CJKfontspec{SimSun}\fontsize{12pt}{\baselineskip}\bfseries
 }
 {
     (\thesubsubsection) 
@@ -96,12 +99,12 @@
 \ifnum \c@section>\z@ \@arabic\c@section-\fi \ifnum
 \c@subsection>\z@ \@arabic\c@subsection-\fi\ifnum
 \c@subsubsection>\z@
-\@arabic\c@subsubsection-\fi\@arabic\c@equation}
+\@arabic\c@subsubsection-\fi\@arabic\c@figure}
 \makeatother
 
 \makeatletter
 % \@addtoreset{subsubsection}{chapter}
-% \@addtoreset{subsubsection}{section}
+\@addtoreset{subsubsection}{section}
 % \@addtoreset{figure}{chapter}
 \@addtoreset{figure}{section}
 \@addtoreset{figure}{subsection}
@@ -113,12 +116,12 @@
 \ifnum \c@section>\z@ \@arabic\c@section-\fi \ifnum
 \c@subsection>\z@ \@arabic\c@subsection-\fi\ifnum
 \c@subsubsection>\z@
-\@arabic\c@subsubsection-\fi\@arabic\c@equation}
+\@arabic\c@subsubsection-\fi\@arabic\c@table}
 \makeatother
 
 \makeatletter
 % \@addtoreset{subsubsection}{chapter}
-% \@addtoreset{subsubsection}{section}
+\@addtoreset{subsubsection}{section}
 % \@addtoreset{table}{chapter}
 \@addtoreset{table}{section}
 \@addtoreset{table}{subsection}
