@@ -243,3 +243,7 @@ TSWLatexianTemp*
 
 # my homework
 report.*
+digital-elec/*.png
+
+# vscode
+.vscode
